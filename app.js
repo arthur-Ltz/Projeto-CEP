@@ -54,7 +54,6 @@ formBuscar.addEventListener('submit', async (event) => {
             cidade.textContent = `${dados.localidade}/${dados.uf}`;
             let tagBotao = document.createElement('button');
             tagBotao.setAttribute('type', 'button');
-            tagBotao.classList.remove('fracasso');
             tagBotao.classList.add('tag-footer');
             tagBotao.textContent = dados.cep;
             input.value = '';
@@ -79,7 +78,6 @@ formBuscar.addEventListener('submit', async (event) => {
         }
     } else {
         alert('O CEP precisa ter 8 digitos.')
-        input.value = '';
     }
 
 });
