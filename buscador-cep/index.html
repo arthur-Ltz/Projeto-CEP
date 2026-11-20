@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuscaCEP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+
+        <nav class="container container-header">
+            <a href="index.html" class="box box-1-header">
+                <img src="./images/icone-buscacep.svg" alt="Icone BuscaCEP">
+                <p>BuscaCEP</p>
+            </a>
+
+            <a class="anchor-github" href="#">Ver no GitHub</a>
+        </nav>
+
+    </header>
+
+    <main class="container container-main">
+
+        <div class="box box-1-main">
+            <h1>Encontre um endereço pelo CEP</h1>
+            <p>Digite os 8 números do CEP para ver rua, bairro e cidade/uf.</p>
+        </div>
+
+        <form class="box search-form" action="#" method="get" id="formcep" name="formcep">
+            <div>
+                <label for="cep">CEP</label>
+                <input type="text" inputmode="numeric" name="cep" id="cep" required placeholder="Ex.: 00000000"
+                    minlength="8" maxlength="8">
+                <p>Digite apenas os números</p>
+            </div>
+            <button type="submit">Buscar</button>
+        </form>
+
+
+        <div class="box result-card">
+
+            <div class="div-1-box-3">
+                <div class="numero-cep">00000-000</div>
+                <div class="tag-endereco">BuscaCEP</div>
+            </div>
+
+            <div class="div-2-box-3">
+                <div class="div-1">
+                    <span>RUA</span>
+                    <p class="resposta resposta-rua">...</p>
+                </div>
+                <div class="div-2">
+                    <div>
+                        <span>BAIRRO</span>
+                        <p class="resposta resposta-bairro">...</p>
+                    </div>
+
+                    <div>
+                        <span>CIDADE/UF</span>
+                        <p class="resposta resposta-cidade">...</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="container container-footer">
+        <div class="box box-footer">
+            <h4 class="titulo-footer">Buscas recentes</h4>
+            <div class="box-tags-footer">
+                <button class="tag-template" type="button">XXXXX-XXX</button>
+                <button class="tag-template" type="button">XXXXX-XXX</button>
+                <button class="tag-template" type="button">XXXXX-XXX</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Fundo e superfícies */
+    --bg: #0F1716;
+    --surface: #17211F;
+    --border: #2A3835;
+
+    /* Texto */
+    --text: #E8F1EE;
+    --text-muted: #9AB0AA;
+
+    /* Marca */
+    --on-primary: #0F1716;
+    --primary: #2DD4A7;
+    --primary-hover: #22B38C;
+    --primary-soft: #173A33;
+
+    /* Estados */
+    --success: #4ADE80;
+    --success-soft: #163A26;
+    --error: #F87171;
+    --error-soft: #3A1A1A;
+
+    /* Fontes */
+    --font-title: "Space Grotesk", sans-serif;
+    --font-body: "Inter", sans-serif;
+    --font-small: 0.75rem;
+    --font-normal: 1rem;
+    --font-medium: 1.75rem;
+    --font-medium-large: 2.5rem;
+    --font-large: 3.25rem;
+    --font-xlarge: 4rem;
+}
+
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-normal);
+    gap: 2rem;
+}
+
+.container-header {
+    background-color: var(--surface);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25rem 0.75rem;
+    align-items: center;
+    border-bottom: solid 1px var(--border);
+
+    .box-1-header {
+        display: flex;
+        text-decoration: none;
+        color: inherit;
+        align-items: center;
+    }
+
+    .anchor-github {
+        text-decoration: none;
+        color: var(--primary);
+    }
+}
+
+.container-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0.75rem;
+
+    .box-1-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 3rem;
+
+        h1 {
+            font-family: var(--font-title);
+            font-size: var(--font-medium-large);
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: var(--font-normal);
+        }
+    }
+
+    .search-form {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        background-color: var(--surface);
+        padding: 1.5rem 0.75rem;
+        border-radius: 1.5rem;
+        border: solid 1px var(--border);
+        box-shadow: 2px 2px 2px 2.5px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        max-width: 50rem;
+        min-height: 10rem;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            width: 80%;
+
+            label {
+                font-family: var(--font-title);
+                font-weight: bold;
+            }
+
+            input {
+                color: var(--text);
+                padding: 0.5rem;
+                border-radius: 0.5rem;
+                background-color: var(--bg);
+                border: solid 2px var(--bg);
+
+                &:focus {
+                    border: solid 2px var(--primary-hover);
+                    outline: none;
+                }
+
+                &::placeholder {
+                    color: var(--text-muted)
+                }
+            }
+
+            p {
+                color: var(--text-muted);
+                font-size: var(--font-small);
+            }
+
+        }
+
+        button {
+            font-family: var(--font-body);
+            font-weight: 700;
+            font-size: medium;
+            padding: 0.25rem;
+            background-color: var(--primary-hover);
+            color: var(--on-primary);
+            min-height: 2rem;
+            border: none;
+            border-radius: 0.5rem;
+            width: 15%;
+            min-width: fit-content;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                color: var(--text);
+                background-color: var(--on-primary);
+                transform: scale(1.05);
+                cursor: pointer;
+            }
+        }
+    }
+
+    .result-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.5rem;
+        background-color: var(--surface);
+        padding: 1.5rem 0.75rem;
+        border-radius: 1.5rem;
+        border: solid 1px var(--border);
+        box-shadow: 2px 2px 2px 2.5px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        max-width: 50rem;
+        min-height: 10rem;
+
+        .div-1-box-3 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .numero-cep {
+                font-size: var(--font-medium);
+            }
+
+            .tag-endereco {
+                font-size: var(--font-small);
+                background-color: var(--primary-soft);
+                padding: 0.35rem 0.75rem;
+                border-radius: 0.5rem;
+                color: var(--primary);
+            }
+
+            .invalido {
+                color: var(--error);
+                background-color: var(--error-soft);
+            }
+
+        }
+
+        .div-2-box-3 {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+
+            span {
+                font-size: var(--font-small);
+                color: var(--text-muted);
+                font-family: var(--font-title);
+            }
+
+            .div-2 {
+                display: flex;
+                justify-content: space-between;
+                width: 85%;
+            }
+        }
+    }
+}
+
+.container-footer {
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 20dvh;
+
+    .titulo-footer {
+        font-family: var(--font-title);
+        margin-bottom: 0.75rem;
+    }
+
+    .box-tags-footer {
+        display: flex;
+        gap: 0.75rem;
+
+        .tag-footer, 
+        .tag-template {
+            font-size: var(--font-small);
+            background-color: var(--primary-soft);
+            padding: 0.35rem 0.75rem;
+            border-radius: 0.5rem;
+            color: var(--primary);
+            border: none;
+
+            &.fracasso {
+                background-color: var(--error-soft);
+                color: var(--error);
+            }
+        }
+        
+    }
+}
+
+/*---------------------------------------- Media queries  ---------------------------------------- */
+
+    @media (max-width: 360px) {
+        .tag-endereco {
+            text-wrap: nowrap;
+        }
+    }
+
+    @media (max-width: 425px) {
+        .container-main {
+            .search-form {
+                button {
+                    aspect-ratio: 1 / 0.8;
+                    border-radius: 0.75rem;
+                }
+            }
+        }
+    }
